@@ -1,7 +1,15 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.13'
+MACOSX_SDK_VERSION:
+- '10.13'
 c_compiler:
-- vs2022
+- clang
+c_compiler_version:
+- '19'
 c_stdlib:
-- vs
+- macosx_deployment_target
+c_stdlib_version:
+- '10.13'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -12,6 +20,8 @@ libpng:
 - '1.6'
 libtiff:
 - '4.7'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -19,6 +29,9 @@ pin_run_as_build:
 python:
 - 3.12.* *_cpython
 target_platform:
-- win-64
+- osx-64
+zip_keys:
+- - python
+  - channel_sources
 zlib:
 - '1'
